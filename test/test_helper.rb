@@ -7,9 +7,11 @@ require 'minitest/reporters'
 Minitest::Reporters.use!
 
 class ActiveSupport::TestCase
-  include FactoryGirl::Syntax::Methods, Devise::TestHelpers
+  include FactoryGirl::Syntax::Methods
 end
 
 class ActionController::TestCase
   include Devise::TestHelpers
+  include FactoryGirl::Syntax::Methods
 end
+
