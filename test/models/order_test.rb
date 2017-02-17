@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class OrderTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "factory" do
+    order = build(:order)
+    saved = order.save
+    assert_equal(true, saved)
+  end
 end
